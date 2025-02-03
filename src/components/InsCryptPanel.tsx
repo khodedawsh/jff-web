@@ -177,11 +177,11 @@ export function InsCryptPanel() {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
           <Lock className="text-blue-600" size={18} />
-          <h2 className="text-sm font-bold">InsCrypt Configuration Panel</h2>
+          <h2 className="text-sm font-bold">Dawsh's Just For Fun project</h2>
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-600">
           <Shield size={14} />
-          <span>Secure Connection</span>
+          <span>Allow InSecure Connection</span>
         </div>
       </div>
 
@@ -270,6 +270,7 @@ export function InsCryptPanel() {
                     <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
                     <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                   </svg>
+                  <span className="text-[#939293] text-xs">COPY</span>
                 </button>
               </div>
             </div>
@@ -279,7 +280,7 @@ export function InsCryptPanel() {
               customStyle={{
                 margin: 0,
                 borderRadius: 0,
-                maxHeight: '300px',
+                // maxHeight: '1000px',
               }}
             >
               {result}
