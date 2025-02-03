@@ -14,7 +14,7 @@ import { InsCryptPanel } from './components/InsCryptPanel';
 
 function App() {
   const [isFileExplorerOpen, setIsFileExplorerOpen] = useState(true);
-  const [isMaximized, setIsMaximized] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(true);
   const [time, setTime] = useState(new Date());
   const [showStartMenu, setShowStartMenu] = useState(false);
 
@@ -98,7 +98,7 @@ function App() {
           <div className="h-7 bg-[#000080] text-white flex items-center justify-between px-2 select-none">
             <div className="flex items-center gap-2">
               <Window size={16} className="animate-pulse" />
-              <span className="text-sm truncate">File Explorer</span>
+              <span className="text-sm truncate">Dawsh's JFF</span>
             </div>
             <div className="flex items-center gap-1">
               <button
@@ -173,7 +173,7 @@ function App() {
           <div className="flex-1 mx-2 overflow-hidden">
             <button className="win98-button px-2 py-1 text-sm flex items-center gap-2 bg-[#B0B7B8] max-w-full">
               <Window size={14} />
-              <span className="truncate">File Explorer</span>
+              <span className="truncate">Dawsh's JFF</span>
             </button>
           </div>
         )}
