@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .win98-button {
+    @apply bg-[#C0C7C8] border-2 border-white border-r-[#919B9C] border-b-[#919B9C] 
+           active:border-[#919B9C] active:border-r-white active:border-b-white cursor-pointer
+           transition-colors duration-100;
+  }
+
+  .win98-input {
+    @apply bg-white border-2 border-[#919B9C] border-r-white border-b-white 
+           focus:outline-none px-2 py-1;
+  }
+}
+
+@layer utilities {
+  .shadow-win98 {
+    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+  }
+  .shadow-win98-taskbar {
+    box-shadow: inset 0 1px #dfdfdf,inset 0 2px #fff;
+  }
+
+  .typing-animation {
+    overflow: hidden;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    max-width: fit-content;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #000 }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(15px, -15px) rotate(90deg);
+    }
+    50% {
+      transform: translate(0, -30px) rotate(180deg);
+    }
+    75% {
+      transform: translate(-15px, -15px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.2s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
